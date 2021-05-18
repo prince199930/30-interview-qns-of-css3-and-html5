@@ -1,0 +1,196 @@
+<!--todo 30 CSS Questions related to an Interview -->
+
+1. What is the Box model in CSS? Which CSS properties are a part of it?
+A rectangle box is wrapped around every HTML element. The box model is used to determine the height and width of the rectangular box. The CSS Box consists of Width and height (or in the absence of that, default values and the content inside), padding, borders, margin.
+
+2. What are the advantages of using CSS?
+The main advantages of CSS are given below:
+
+Separation of content from presentation - CSS provides a way to present the same content in multiple presentation formats in mobile or desktop or laptop.
+Easy to maintain - CSS, built effectively can be used to change the look and feel complete by making small changes. To make a global change, simply change the style, and all elements in all the web pages will be updated automatically.
+Bandwidth - Used effectively, the style sheets will be stored in the browser cache and they can be used on multiple pages, without having to download again.
+
+3. What are the limitations of CSS?
+Disadvantages of CSS are given below:
+
+Browser Compatibility: Some style selectors are supported and some are not. We have to determine which style is supported or not using the @support selector).
+Cross Browser issue: Some selectors behave differently in a different browser).
+There is no parent selector: Currently, Using CSS, you can’t select a parent tag.
+
+4. How to include CSS in the webpage?
+There are different ways to include a CSS in a webpage,
+
+1 - External Style Shee
+2 - Embed CSS with a style tag
+3 - Add inline styles to HTML elements
+4 - Import a stylesheet file
+
+5. What are the different types of Selectors in CSS?
+A CSS selector is the part of a CSS ruleset that actually selects the content you want to style. Different types of selectors are listed below.
+1 Universal Selector
+2 Element Type Selector
+3 ID Selector
+4 Class Selector
+5 Descendant Combinator
+6 Child Combinator
+7 General Sibling Combinator
+8 Adjacent Sibling Combinator
+9 Attribute Selector
+
+6. What is VH/VW (viewport height/ viewport width) in CSS?
+It’s a CSS unit used to measure the height and width in percentage with respect to the viewport. It is used mainly in responsive design techniques. The measure VH is equal to 1/100 of the height of the viewport. If the height of the browser is 1000px, 1vh is equal to 10px. Similarly, if the width is 1000px, then 1 vw is equal to 10px.
+
+7. What is the difference between inline, inline-block, and block?
+Block Element: The block elements always start on a new line. They will also take space for an entire row or width. List of block elements are <div>, <p>.
+
+Inline Elements: Inline elements don't start on a new line, they appear on the same line as the content and tags beside them. Some examples of inline elements are <a>, <span> , <strong>, and <img> tags. 
+
+Inline Block Elements: Inline-block elements are similar to inline elements, except they can have padding and margins added on all four sides.
+
+8.  What is a Pseudo element? What is pseudo-class?
+Pseudo-classes select regular elements but under certain conditions like when the user is hovering over the link.
+
+:link
+:visited
+:hover
+:active
+:focus
+
+A pseudo-element however allows us to create items that do not normally exist in the document tree, for example ::after.
+
+::before
+::after
+::first-letter
+::first-line
+::selection
+
+9.  How do you specify units in the CSS?. What are the different ways to do it?
+There are different ways to specify units in CSS like px, em, pt, percentage (%). px(Pixel) gives fine-grained control and maintains alignment because 1 px or multiple of 1 px is guaranteed to look sharp. px is not cascade. em maintains relative size. you can have responsive fonts. Em, will cascade 1em is equal to the current font-size of the element or the browser default. If u sent font-size to 16px then 1em = 16px. The common practice is to set default body font-size to 62.5% (equal to 10px).
+
+10.  Does margin-top or margin-bottom have an effect on inline elements?
+No, it doesn’t affect the inline elements. Inline elements flow with the contents of the page.
+
+11.  Explain CSS position property?
+Absolute
+
+To place an element exactly where you want to place it. absolute position is actually set relative to the element's parent. if no parent is available then the relative place to the page itself (it will default all the way back up to the element).
+
+Relative
+
+"Relative to itself". Setting position: relative; on an element and no other positioning attributes, it will no effect on its positioning. It allows the use of z-index on the element and it limits the scope of absolutely positioned child elements. Any child element will be absolutely positioned within that block. 
+
+Fixed
+
+The element is positioned relative to the viewport or the browser window itself. viewport doesn't change if you scroll and hence the fixed element will stay right in the same position. 
+
+Static
+
+Static default for every single page element. The only reason you would ever set an element to position: static is to forcefully-remove some positioning that got applied to an element outside of your control.
+
+Sticky
+
+Sticky positioning is a hybrid of relative and fixed positioning. The element is treated as relative positioned until it crosses a specified threshold, at which point it is treated as fixed positioned.
+
+12.  What does DOM reflow occur?
+Reflow is the name of the web browser process for re-calculating the positions and geometries of elements in the document, for the purpose of re-rendering part or all of the document. 
+
+Reflow occurs when:
+
+Insert, remove or update an element in the DOM.
+Modify content on the page, e.g. the text in an input box.
+Move a DOM element.
+Animate a DOM element.
+Take measurements of an element such as offsetHeight or getComputedStyle.
+Change a CSS style.
+
+13.  Different Box Sizing Property?
+The box-sizing CSS property sets how the total width and height of an element are calculated.
+
+Content-box: The default width and height values apply to the element's content only. The padding and border are added to the outside of the box.
+
+Padding-box: Width and height values apply to the element's content and its padding. The border is added to the outside of the box. Currently, only Firefox supports the padding-box value.
+
+Border-box: Width and height values apply to the content, padding, and border.
+
+14.  Can you name the four types of @media properties?
+The four types of @media properties are:
+
+All → It’s the default property. Used for all media-type devices.
+Screen → Used for computer screen, mobile screen.
+Print → Used for printers.
+Speech → Used for screen readers.
+
+15. What is the grid system?
+CSS Grid Layout is the most powerful layout system available in CSS. It is said to be a 2-dimensional system, meaning it can handle both columns and rows, unlike flexbox which is largely a 1-dimensional system.
+
+16. What are the different ways to hide the element using CSS?
+Using display property(display: none). It’s not available for screen readers. The element will not exist in the DOM if display: none is used.
+
+Using visibility property(visibility: hidden), will take up the space of the element. It will be available to screen reader users. The element will actually be present in the DOM, but not shown on the screen.
+
+Using position property (position: absolute). Make it available outside the screen.%
+
+17. What does the :root pseudo-class refer to?
+The :root selector allows you to target the highest-level “parent” element in the DOM, or document tree. It is defined in the CSS Selectors Level 3 specification.
+
+18. How do I restore the default value of a property?
+The keyword initial can be used to reset it to its default value.
+
+19.  Difference between CSS grid vs flexbox?
+CSS Grid Layout is a two-dimensional system, meaning it can handle both columns and rows. Grid layout is intended for larger-scale layouts which aren’t linear in design.
+
+Flexbox is largely a one-dimensional system (either in a column or a row). Flexbox layout is most appropriate to the components of an application.
+
+20. How does Calc work?
+The CSS3 calc() function allows us to perform mathematical operations on property values. Instead of declaring, for example, static pixel values for an element's width, we can use calc() to specify that the width is the result of the addition of two or more numeric values.
+
+21. What do CSS Custom properties variables mean?
+Custom properties (sometimes referred to as CSS variables or cascading variables) are defined by users that contain specific values to be reused throughout a document. The value is set using -- notion. And the values are accessed using the var() function.
+
+22. What does * { box-sizing: border-box; } do? What are its advantages?
+It makes every element in the document include the padding and border in the element’s inner dimension for the height and width computation.  In box-sizing: border-box, The height of an element is now calculated by the content's height + vertical padding + vertical border width.
+
+The width of an element is now calculated by the content's width + horizontal padding + horizontal border width.
+
+23. What does important mean in CSS?
+The style is having the important will have the highest precedence and it overrides the cascaded property.
+
+24. What is specificity? How to calculate specificity?
+A process of determining which CSS rule will be applied to an element. It actually determines which rules will take precedence. Inline style usually wins then ID then the class value (or pseudo-class or attribute selector), the universal selector (*) has no specificity. ID selectors have a higher specificity than attribute selectors.
+
+25.  What are the advantages of using translate() instead of absolute position?
+Translate() does not cause the browser to trigger repaint and layout and instead only acts on the compositor. The absolute position triggers the repaint or DOM reflow. So, translate() gives the better performance.
+
+26. Distinguish between CSS2 and CSS3?
+CSS3 is divided into two various sections which are called a module. Whereas in CSS2 everything accedes into a single document with all the information in it.
+CSS3 modules are supported almost on every browser and on the other hand modules of CSS and CSS2 are not supported in every browser.
+In CSS3, we will find that many graphics related characteristics have been introduced like Border-radius or box-shadow, flexbox.
+In CSS3, a user can precise multiple background images on a webpage by using properties like background-image, background-position, and background-repeat styles.
+
+27. Explain the term Responsive web design?
+It is a method in which we design and develop a web page according to the user activities and conditions which are based on various components like the size of the screen, portability of the web page on the different devices, etc. It is done by using different flexible layouts and grids.
+
+28. What are gradients in CSS?
+It is a property of CSS which allows you to display a smooth transformation between two or more than two specified colors.
+
+There are two types of gradients that are present in CSS. They are:
+
+Linear Gradient
+Radial Gradient
+
+29. Write all the properties of the flexbox?
+There are several properties of the flexbox that are used in the HTML webpage.
+
+They are:
+
+flex-direction
+flex-wrap
+flex-flow
+justify-content
+align-items
+align-content
+
+30.  What are the differences between relative and absolute in CSS?
+The main difference between relative and absolute is that “relative” is used for the same tag in CSS and it means that if we write the left:10px then the padding will shift to 10px in the left while absolute is totally relative to the non-static parent.
+
+It means, if we write left:10px then the result will be 10px far from the left edge of the parent element.
